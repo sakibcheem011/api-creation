@@ -11,7 +11,8 @@ class ClassificationEngine:
     # Keyword maps supporting multiple languages/phrasing
     KEYWORDS_WRONG_TRANSFER = [
         "wrong transfer", "wrong number", "vul number", "vul transfer", 
-        "mistake transfer", "ভুল নাম্বার", "ভুল নম্বর", "ভুল করে", "ভুল পাঠান"
+        "mistake transfer", "ভুল নাম্বার", "ভুল নম্বর", "ভুল করে", "ভুল পাঠান",
+        "vul kore", "bhul kore", "vul send"
     ]
     
     KEYWORDS_PHISHING = [
