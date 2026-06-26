@@ -16,9 +16,9 @@ logger = logging.getLogger("app.main")
 
 # Initialize FastAPI App with automatic Swagger configurations
 app = FastAPI(
-    title="QueueStorm Investigator API",
+    title="NovaForge Investigator API",
     description=(
-        "Production-ready backend for the QueueStorm Investigator hackathon. "
+        "Production-ready backend for the NovaForge Investigator hackathon. "
         "Automates banking complaint analysis by running rules and Gemini API analysis. "
         "Verifies complaints against transaction records, routes to appropriate queues, "
         "and checks drafted responses against safety rules."
@@ -97,6 +97,6 @@ async def root():
     Landing endpoint directing clients to Swagger docs.
     """
     return {
-        "message": "Welcome to QueueStorm Investigator API. Access API docs at /docs",
+        "message": "Welcome to NovaForge Investigator API. Access API docs at /docs",
         "docs_url": "/docs"
     }

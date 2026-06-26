@@ -24,11 +24,11 @@ class SafetyEngine:
     )
 
     # Unofficial contacts checks (detects external phone numbers or URLs)
-    # Allows official: 16247, support@queuestorm.com, https://queuestorm.com
+    # Allows official: 16247, support@novaforge.com, https://novaforge.com
     PATTERN_CONTACTS = re.compile(
         r'\b(?:\+?88)?01[3-9]\d{8}\b|'                      # Mobile numbers
-        r'\bhttps?://(?!queuestorm\.com)[a-zA-Z0-9./-]+\b|' # Untrusted URLs
-        r'\b[a-zA-Z0-9._%+-]+@(?!queuestorm\.com)[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}\b' # Untrusted emails
+        r'\bhttps?://(?!novaforge\.com)[a-zA-Z0-9./-]+\b|' # Untrusted URLs
+        r'\b[a-zA-Z0-9._%+-]+@(?!novaforge\.com)[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}\b' # Untrusted emails
     )
 
     def audit_reply(self, reply: str) -> Tuple[str, bool, List[str]]:
@@ -72,7 +72,7 @@ class SafetyEngine:
             violations.append("safety_unofficial_contact_attempt")
             violation_applied = True
             # Sanitize: Replace external links/phones with official contact info
-            sanitized = self.PATTERN_CONTACTS.sub("our official channel support@queuestorm.com (or dial 16247)", sanitized)
+            sanitized = self.PATTERN_CONTACTS.sub("our official channel support@novaforge.com (or dial 16247)", sanitized)
 
         # Double check if sanitization made the text messy or still contains violations.
         # If it still contains violations, completely replace it with a fail-safe fallback reply template.
@@ -84,7 +84,7 @@ class SafetyEngine:
             sanitized = (
                 "Thank you for reaching out. We have logged your complaint and matching transactions. "
                 "Our dispute team is investigating this issue. For safety, please do not share your PIN/OTP "
-                "with anyone. You can trace this status directly in the app or contact support at support@queuestorm.com."
+                "with anyone. You can trace this status directly in the app or contact support at support@novaforge.com."
             )
             violations.append("safety_hard_fallback_triggered")
 

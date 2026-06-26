@@ -3,7 +3,7 @@ import urllib.error
 import json
 
 # Target local server endpoint
-url = "http://127.0.0.1:8000/analyze-ticket"
+url = "https://novaforge-investigator-api.onrender.com/analyze-ticket"
 
 # Sample complaint request body
 payload = {

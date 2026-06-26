@@ -1,1 +1,1 @@
-# QueueStorm Investigator backend app package.
+# NovaForge Investigator backend app package.

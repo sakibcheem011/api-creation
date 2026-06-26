@@ -1,6 +1,6 @@
-# QueueStorm Investigator Backend
+# NovaForge Investigator Backend
 
-A production-ready, clean-architecture FastAPI backend built for the **QueueStorm Investigator** hackathon. This system acts as an AI complaint investigator to ingest user complaints, analyze them against user transaction histories, evaluate evidence, categorize and route the case, and draft policy-compliant customer replies.
+A production-ready, clean-architecture FastAPI backend built for the **NovaForge Investigator** hackathon. This system acts as an AI complaint investigator to ingest user complaints, analyze them against user transaction histories, evaluate evidence, categorize and route the case, and draft policy-compliant customer replies.
 
 ---
 
@@ -176,12 +176,12 @@ Evaluates the ticket complaint against transaction histories.
 
 ### Build Image
 ```bash
-docker build -t queuestorm-backend .
+docker build -t novaforge-backend .
 ```
 
 ### Run Container
 ```bash
-docker run -p 8000:8000 --env-file .env queuestorm-backend
+docker run -p 8000:8000 --env-file .env novaforge-backend
 ```
 
 ---

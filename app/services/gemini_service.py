@@ -49,7 +49,7 @@ class GeminiService:
                 tx_details = json.dumps(matching_tx.model_dump(), indent=2)
 
         prompt = f"""
-You are the core AI agent for "QueueStorm Investigator", an automated banking complaint investigator.
+You are the core AI agent for "NovaForge Investigator", an automated banking complaint investigator.
 Your job is to analyze this ticket and improve the baseline summary, action step, and customer response.
 
 INPUT TICKET:
@@ -67,7 +67,7 @@ CRITICAL CUSTOMER REPLY SAFETY RULES:
 The generated `customer_reply` must NEVER:
 1. Ask for credentials, credentials change, PIN, OTP, or passwords.
 2. Promise refunds, transaction reversals, or account recovery.
-3. Direct users to unofficial contacts (emails, phone numbers, external WhatsApp). Only direct them to standard official support channels like support@queuestorm.com or hotline 16247.
+3. Direct users to unofficial contacts (emails, phone numbers, external WhatsApp). Only direct them to standard official support channels like support@novaforge.com or hotline 16247.
 
 Generate a JSON response containing exactly these three fields:
 1. "agent_summary": A concise audit description for internal support agents, summarising why the complaint matches or doesn't match the transactions.
